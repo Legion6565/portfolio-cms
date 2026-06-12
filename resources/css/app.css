@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ProseMirror {
+    white-space: pre-wrap;
+    min-height: 250px;
+    outline: none;
+    cursor: text;
+    /* Never let a long unbroken string blow out the editor width. */
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+.ProseMirror:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Rendered rich-text (final page + live preview): wrap aggressively so
+   extremely long words/URLs can never cause horizontal overflow. */
+.rich-text,
+.rich-text * {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.rich-text {
+    white-space: pre-wrap;
+}
