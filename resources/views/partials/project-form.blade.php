@@ -150,8 +150,8 @@
                                                             <label class="block text-sm text-slate-500 mb-2">Сторона изображения</label>
                                                             <select :name="'sections[' + index + '][meta][layout]'" x-model="section.meta.layout"
                                                                     class="w-full rounded-xl border border-slate-300 px-4 py-3">
-                                                                <option value="left">Слева</option>
-                                                                <option value="right">Справа</option>
+                                                                <option value="left">Left</option>
+                                                                <option value="right">Right</option>
                                                             </select>
                                                         </div>
                                                     </template>

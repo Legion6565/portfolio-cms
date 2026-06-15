@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: MySQL-8.4:3306
--- Время создания: Июн 12 2026 г., 14:34
+-- Время создания: Июн 15 2026 г., 17:55
 -- Версия сервера: 8.4.7
 -- Версия PHP: 8.5.1
 
@@ -166,7 +166,7 @@ CREATE TABLE `projects` (
 --
 
 INSERT INTO `projects` (`id`, `title`, `short_description`, `image`, `github_link`, `created_at`, `updated_at`, `technologies`, `project_date`) VALUES
-(20, 'Finance model', 'Finance model game of the throne', 'projects/vZl1kCJpYHVrPzRDearqml7XMwqMItwFnZD1JMsv.jpg', NULL, '2026-06-11 18:49:38', '2026-06-12 01:11:23', 'Laravel, MySQL, PHP, Blade, ПопаМуравья, КитайскуаяСпаржа', '5555-05-05');
+(21, 'Система управления контентом сайта-портфолио', 'Лёгкая CMS на Laravel: блочный редактор кейсов и предпросмотр в реальном времени без правки кода', 'projects/c8Yf4bGji28PitnwAymjtbkIDvZc6oa29iUNdHUt.png', NULL, '2026-06-15 07:34:48', '2026-06-15 07:34:48', 'Laravel, PHP, MySQL, Tailwind CSS, Alpine.js, TipTap, SortableJS, Vite', '2026-06-01');
 
 -- --------------------------------------------------------
 
@@ -190,14 +190,18 @@ CREATE TABLE `project_sections` (
 --
 
 INSERT INTO `project_sections` (`id`, `project_id`, `type`, `content`, `position`, `created_at`, `updated_at`, `meta`) VALUES
-(59, 20, 'title', 'Задача', 0, '2026-06-12 01:11:23', '2026-06-12 01:11:23', '{\"theme\": \"dark\", \"width\": \"narrow\"}'),
-(60, 20, 'text', '<p>Убить <strong><em>трех </em></strong>гоблинов</p>', 1, '2026-06-12 01:11:23', '2026-06-12 01:11:23', '{\"theme\": \"light\", \"width\": \"normal\"}'),
-(61, 20, 'gallery', NULL, 2, '2026-06-12 01:11:23', '2026-06-12 01:11:23', '{\"theme\": \"light\", \"width\": \"normal\", \"images\": [\"projects/gallery/819vYiTCukfNYac5dCAMnP8fbbATmbmjs8a1cpdX.png\", \"projects/gallery/Gr6rk887GGUckHx7ho3f0FcIrH2VrYnI4FxMuv3O.png\", \"projects/gallery/Kqy5erv2CEGp6y39ncyK5bvdhTRi83V9A1ikEV9O.png\"], \"layout\": \"left\"}'),
-(62, 20, 'title', 'Решение', 3, '2026-06-12 01:11:23', '2026-06-12 01:11:23', '{\"theme\": \"light\", \"width\": \"normal\"}'),
-(63, 20, 'text', '<p>Взять в руки холодное оружие и убить зеленых гадов.................................................................................................................................................................................................................................................</p>', 4, '2026-06-12 01:11:23', '2026-06-12 01:11:23', '{\"theme\": \"light\", \"width\": \"normal\"}'),
-(64, 20, 'image', 'projects/sections/Rx7VL6sbrfhLgVRrVjFreMrOdwSRydHdTNubkEP0.jpg', 5, '2026-06-12 01:11:23', '2026-06-12 01:11:23', '{\"theme\": \"light\", \"width\": \"normal\", \"layout\": \"left\"}'),
-(65, 20, 'title', 'Насрать на трупы гоблинов', 6, '2026-06-12 01:11:23', '2026-06-12 01:11:23', '{\"theme\": \"dark\", \"width\": \"full\"}'),
-(66, 20, 'text', '<p>Желательно <strong><em>поносом</em></strong> или где то достать <strong><em>грифона</em></strong>, который съел <strong><em>5 лошадей</em></strong> и заел <strong><em>сюрстремингом</em></strong></p>', 7, '2026-06-12 01:11:23', '2026-06-12 01:11:23', '{\"theme\": \"dark\", \"width\": \"full\"}');
+(104, 21, 'title', 'О проекте', 0, '2026-06-15 07:37:04', '2026-06-15 07:37:04', '{\"group\": \"A\", \"theme\": \"light\", \"width\": \"normal\"}'),
+(105, 21, 'text', '<p>Система позволяет владельцу портфолио самостоятельно создавать и редактировать проекты, наполнять их разнородными блоками и управлять компоновкой — <strong>без правки исходного кода</strong> и повторного развёртывания. Кейс собирается из независимых блоков: заголовков, форматированного текста, отдельных изображений и галерей.</p>', 1, '2026-06-15 07:37:04', '2026-06-15 07:37:04', '{\"group\": \"A\", \"theme\": \"light\", \"width\": \"normal\"}'),
+(106, 21, 'image', 'projects/sections/9gilJjzN7s8lL3QjGLPbpJxJFroGisMmwbYZnLyJ.png', 2, '2026-06-15 07:37:04', '2026-06-15 07:37:04', '{\"group\": \"B\", \"theme\": \"light\", \"width\": \"normal\", \"layout\": \"left\"}'),
+(107, 21, 'text', '<p>Блочный редактор — основа админ-панели. Каждый блок хранит собственные настройки оформления, а порядок блоков меняется простым перетаскиванием. Изображение слева, текст справа — связка собирается автоматически по общей группе.</p>', 3, '2026-06-15 07:37:04', '2026-06-15 07:37:04', '{\"group\": \"B\", \"theme\": \"light\", \"width\": \"normal\"}'),
+(108, 21, 'text', '<p>Главная идея системы — достоверный предпросмотр: то, что автор видит при редактировании, в точности совпадает с опубликованной страницей, потому что и там, и там работает один и тот же набор правил композиции.</p>', 4, '2026-06-15 07:37:04', '2026-06-15 07:37:04', '{\"theme\": \"dark\", \"width\": \"wide\"}'),
+(109, 21, 'image', 'projects/sections/DbKe0B7hUEHlPbKwOoProhlhyGsG3kp60rWqFkyP.png', 5, '2026-06-15 07:37:04', '2026-06-15 07:37:04', '{\"group\": \"C\", \"theme\": \"light\", \"width\": \"normal\", \"layout\": \"right\"}'),
+(110, 21, 'text', '<p>Данные о проектах и блоках хранятся в реляционной базе, а гибкие настройки оформления каждого блока — в поле формата JSON. Это позволяет добавлять новые параметры отображения, не меняя структуру таблиц. Здесь изображение справа, текст слева — сторона задана вручную.</p>', 6, '2026-06-15 07:37:04', '2026-06-15 07:37:04', '{\"group\": \"C\", \"theme\": \"light\", \"width\": \"normal\"}'),
+(111, 21, 'title', 'Возможности', 7, '2026-06-15 07:37:04', '2026-06-15 07:37:04', '{\"theme\": \"light\", \"width\": \"normal\"}'),
+(112, 21, 'text', '<p>Создание, редактирование и удаление проектов с подтверждением. Четыре типа блоков: заголовок, форматированный текст, изображение и галерея. Настройка ширины и темы каждого блока, выбор стороны размещения медиа и объединение блоков в композиции. Защищённая паролем административная панель и публичная часть только для чтения.</p>', 8, '2026-06-15 07:37:04', '2026-06-15 07:37:04', '{\"theme\": \"light\", \"width\": \"normal\"}'),
+(113, 21, 'gallery', NULL, 9, '2026-06-15 07:37:04', '2026-06-15 07:37:04', '{\"theme\": \"light\", \"width\": \"full\", \"images\": [\"projects/gallery/wR3g84tSOFtc84Bph2v6xCnLaFfNSBRedYfQM8FD.png\", \"projects/gallery/OMH3pRzyMOw0Mg20XeXDz3FOdcs5uGxIUPoakjl3.png\", \"projects/gallery/TEYhuq27RddS1FGnY3OooYCztJjaGQLdMNx2LAnZ.png\"], \"layout\": \"left\"}'),
+(114, 21, 'title', 'Результат', 10, '2026-06-15 07:37:04', '2026-06-15 07:37:04', '{\"theme\": \"light\", \"width\": \"normal\"}'),
+(115, 21, 'text', '<p>Готовый инструмент, пригодный для ведения собственного портфолио без участия разработчика. Подход с блочным редактором и достоверным предпросмотром можно переиспользовать и в других проектах.</p>', 11, '2026-06-15 07:37:04', '2026-06-15 07:37:04', '{\"theme\": \"light\", \"width\": \"normal\"}');
 
 -- --------------------------------------------------------
 
@@ -219,8 +223,8 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('8gNyGgkVA0nPrjlUPwEAQNgJtqhi5KjQ9ip6c0cv', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 YaBrowser/26.4.0.0 Safari/537.36', 'eyJfdG9rZW4iOiJMOTdlMnRZQ1JJQm1jN0NMSktzbVJiN1hZTThSOFcxc1JWcURZOXBLIiwidXJsIjpbXSwiX2ZsYXNoIjp7Im9sZCI6W10sIm5ldyI6W119LCJfcHJldmlvdXMiOnsidXJsIjoiaHR0cDpcL1wvMTI3LjAuMC4xOjgwMDAiLCJyb3V0ZSI6bnVsbH0sImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjoxfQ==', 1781252157),
-('sEKz2L0T81NVtuqIa69fQvjfNUr7k9DKCz4FC0qa', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 YaBrowser/26.4.0.0 Safari/537.36', 'eyJfdG9rZW4iOiJrRU5kWnZYek5ORDFkMGFvanViOUo5djFPSjZpdGcydW1WWEh3bnZHIiwiX2ZsYXNoIjp7Im9sZCI6W10sIm5ldyI6W119fQ==', 1781250750);
+('3tb1PSCy8KGCrrli4emhBdsVGMys9h0iUO3RmAEt', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 YaBrowser/26.4.0.0 Safari/537.36', 'eyJfdG9rZW4iOiJsOXgwbVoyaG9IcjBhZ2sxZm5kdVgyT2l5OGx0eFdZOG1mejhOZk1OIiwiX2ZsYXNoIjp7Im9sZCI6W10sIm5ldyI6W119LCJfcHJldmlvdXMiOnsidXJsIjoiaHR0cDpcL1wvMTI3LjAuMC4xOjgwMDBcL3Byb2plY3RcLzIwIiwicm91dGUiOm51bGx9LCJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI6MX0=', 1781271311),
+('64bdsZONbtjZHRV4k7BwmL2DdjG38iy8UaGnfrGQ', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 YaBrowser/26.4.0.0 Safari/537.36', 'eyJfdG9rZW4iOiJCeWYyS2tIRHNBeUoyMVR2TkRRajlCV0s4NGU0UVE1QlhzbXE5RXdnIiwiX2ZsYXNoIjp7Im9sZCI6W10sIm5ldyI6W119LCJfcHJldmlvdXMiOnsidXJsIjoiaHR0cDpcL1wvMTI3LjAuMC4xOjgwMDBcL3Byb2plY3RcLzIxIiwicm91dGUiOm51bGx9LCJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI6MX0=', 1781527290);
 
 -- --------------------------------------------------------
 
@@ -244,7 +248,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Boobert', 'slava.corobeinickov@yandex.ru', NULL, '$2y$12$SMu2A5t/4FQ96KN/acrq7ej9.tBTJjdY5kPd00SoYLZrPjbKfTmae', 'lGQrTNsAo6u9xFB1AlpGe9g4kZE1ZrlszHKSXzfTdtD2i7AqQogZr8zCqIQx', '2026-06-11 01:57:14', '2026-06-11 01:57:14');
+(1, 'Boobert', 'slava.corobeinickov@yandex.ru', NULL, '$2y$12$SMu2A5t/4FQ96KN/acrq7ej9.tBTJjdY5kPd00SoYLZrPjbKfTmae', 'DYhDScAN585tIKoytzo1vjMxGWw5uyD2yU6FahXHWWZVPpkYRIXq3n8EYT8A', '2026-06-11 01:57:14', '2026-06-11 01:57:14');
 
 --
 -- Индексы сохранённых таблиц
@@ -351,13 +355,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT для таблицы `projects`
 --
 ALTER TABLE `projects`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT для таблицы `project_sections`
 --
 ALTER TABLE `project_sections`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
